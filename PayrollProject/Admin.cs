@@ -1,7 +1,7 @@
 ﻿using System;
 namespace PayrollProject
 {
-    public class Admin
+    public class Admin : Staff
     {
         public Admin()
         {
