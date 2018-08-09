@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PayrollProject
 {
@@ -6,7 +7,15 @@ namespace PayrollProject
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<Staff> myStaff = new List<Staff>();
+
+            FileReader fr = new FileReader;
+
+            int month = 0;
+
+            int year = 0;
+
+
         }
     }
 }
