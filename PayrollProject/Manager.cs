@@ -13,7 +13,7 @@ namespace PayrollProject
         {
             base.CalculatePay();
             Allowance = 1000;
-            if (HoursWorked > 160)
+            if (HoursWorked > 40)
                 TotalPay = BasicPay + Allowance;
         }
 

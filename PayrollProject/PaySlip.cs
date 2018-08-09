@@ -22,7 +22,7 @@ namespace PayrollProject
         {
             string path;
 
-            foreach (staff f in myStaff)
+            foreach (Staff f in myStaff)
             {
                 path = f.NameOfStaff + ".txt.";
                 using (StreamWriter sw = new StreamWriter(path))
@@ -32,16 +32,16 @@ namespace PayrollProject
                     sw.WriteLine("Name of Staff: {0}", f.NameOfStaff);
                     sw.WriteLine("Hours Worked: {0}", f.HoursWorked);
                     sw.WriteLine("");
-                    sw.WriteLine("Basic Pay: {0;C}", f.BasicPay);
+                    sw.WriteLine("Basic Pay: {0:C}", f.BasicPay);
 
                     if (f.GetType() == typeof(Manager))
-                        sw.WriteLine("Allowance: {0;C}", ((Manager)f).Allowance);
+                        sw.WriteLine("Allowance: {0:C}", ((Manager)f).Allowance);
                     else if (f.GetType() == typeof(Admin))
                         sw.WriteLine("Overtime: {0:C}", ((Admin)f).Overtime);
 
                     sw.WriteLine("");
                     sw.WriteLine("====================");
-                    sw.WriteLine("Total Pay: {0;C}", f.TotalPay);
+                    sw.WriteLine("Total Pay: {0:C}", f.TotalPay);
 
                     sw.Close();
                 }
@@ -64,13 +64,14 @@ namespace PayrollProject
 
                 foreach (var f in result)
                     sw.WriteLine("Name of Staff: {0}, Hours Worked: {1}", f.NameOfStaff, f.HoursWorked);
+
                 sw.Close();
             }
+        }
 
-            public override string ToString()
-            {
-                return "month = " + month + "year = " + year;
-            }
+        public override string ToString()
+        {
+            return "month = " + month + "year = " + year;
         }
     }     
 }

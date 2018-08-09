@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace PayrollProject
 {
     public class Staff

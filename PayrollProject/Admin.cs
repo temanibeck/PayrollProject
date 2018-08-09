@@ -13,11 +13,11 @@ namespace PayrollProject
         public override void CalculatePay()
         {
             base.CalculatePay();
-            Allowance = 1000;
+            float Allowance = 1000;
 
-            if (HoursWorked > 160)
+            if (HoursWorked > 40)
             {
-                Overtime = overtimeRate * (HoursWorked - 160);
+                Overtime = overtimeRate * (HoursWorked - 40);
             }
         }
 
