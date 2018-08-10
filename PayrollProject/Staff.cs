@@ -43,11 +43,11 @@ namespace PayrollProject
 
         public override string ToString()
         {
-            return "\nNameOfStaff = " + NameOfStaff
-                + "\nhourlyRate = " + hourlyRate +
-                "\nhWorked = " + hWorked
-                + "\nBasicPay = " + BasicPay +
-                "\n\nTotalPay = " + TotalPay;
+            return "\nName of Staff = " + NameOfStaff
+                + "\nHourly Rate = " + hourlyRate +
+                "\nHours Worked = " + hWorked
+                + "\nBasic Pay = " + BasicPay +
+                "\n\nTotal Pay = " + TotalPay;
         }
 
     }

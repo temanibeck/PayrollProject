@@ -36,6 +36,7 @@ namespace PayrollProject
 
                     if (f.GetType() == typeof(Manager))
                         sw.WriteLine("Allowance: {0:C}", ((Manager)f).Allowance);
+                    
                     else if (f.GetType() == typeof(Admin))
                         sw.WriteLine("Overtime: {0:C}", ((Admin)f).Overtime);
 
@@ -50,10 +51,12 @@ namespace PayrollProject
 
         public void GenerateSummary(List<Staff> myStaff)
         {
-            var result = from f in myStaff
+            /*var result = from f in myStaff
                          where f.HoursWorked < 10
                          orderby f.NameOfStaff ascending
-                         select new { f.NameOfStaff, f.HoursWorked };
+                         select new { f.NameOfStaff, f.HoursWorked }; */
+            
+            var result = myStaff.Where(x => x.HoursWorked < 10).OrderBy(s => s.NameOfStaff);
 
             string path = "summary.txt";
 

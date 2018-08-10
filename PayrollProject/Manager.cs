@@ -12,19 +12,23 @@ namespace PayrollProject
         public override void CalculatePay()
         {
             base.CalculatePay();
-            Allowance = 1000;
+            Allowance = 0;
+
             if (HoursWorked > 40)
+            {
+                Allowance = 1000;
                 TotalPay = BasicPay + Allowance;
+            }
         }
 
         public override string ToString()
         {
-            return "\nNameOfStaff = " + NameOfStaff
-                + "\nmanagerHourlyRate = " + managerHourlyRate +
-                "\nHoursWorked = " + HoursWorked
-                + "\nBasicPay = " + BasicPay +
+            return "\nName of Staff = " + NameOfStaff
+                + "\nManager Hourly Rate = " + managerHourlyRate +
+                "\nHours Worked = " + HoursWorked
+                + "\nBasic Pay = " + BasicPay +
                 "\nAllowance = " + Allowance +
-                "\n\nTotalPay = " + TotalPay;
+                "\n\nTotal Pay = " + TotalPay;
         }
     }
 }
