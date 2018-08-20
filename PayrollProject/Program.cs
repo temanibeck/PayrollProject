@@ -7,6 +7,7 @@ namespace PayrollProject
     {
         public static void Main(string[] args)
         {
+            //Polymorphism
             List<Staff> myStaff = new List<Staff>();
 
             FileReader fr = new FileReader();

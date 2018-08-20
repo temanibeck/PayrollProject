@@ -3,6 +3,7 @@ namespace PayrollProject
 {
     public class Manager : Staff
     {
+        //Inheritance
         private const float managerHourlyRate = 50;
         public int Allowance { get; private set; }
 

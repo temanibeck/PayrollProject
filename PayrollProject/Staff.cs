@@ -4,6 +4,7 @@ namespace PayrollProject
 {
     public class Staff
     {
+        //Encapsulation & Abstraction
         private float hourlyRate;
         private int hWorked;
 

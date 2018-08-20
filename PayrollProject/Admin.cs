@@ -3,6 +3,7 @@ namespace PayrollProject
 {
     public class Admin : Staff
     {
+        //Inheritance
         private const float overtimeRate = 15.5f;
         private const float adminHourlyRate = 30f;
 
